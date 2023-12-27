@@ -1,0 +1,71 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="/node_modules/bootstrap/js/dist/dom/data.js"></script> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="search-container">
+        <h1>Recipes</h1>
+        <input id="input" type="text" value="" />
+        <button class="button" id="searchButton">search!</button>
+        <button class="button" id="glutenFree">Gluten Free</button>
+        <button class="button" id="dairyFree">Dairy Free</button>
+        <div id="sensitivity" style="display: none">
+          <input
+            id="sensitivityInput"
+            type="text"
+            placeholder="Add a sensitive ingredient"
+          />
+          <button class="button" id="addIngredient">Add ingredient</button>
+          <button class="button" id="sensitivityButton">Sort</button>
+          <div id="sensitiveList"></div>
+        </div>
+      </div>
+      <div class="row g-4" id="meals1"></div>
+
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="http://localhost:2233/page1">1</a>
+        <a href="http://localhost:2233/page2">2</a>
+        <a href="http://localhost:2233/page3">3</a>
+        <a href="http://localhost:2233/page4">4</a>
+        <a href="http://localhost:2233/page5">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+    </div>
+    <script src="../apiManager.js" async defer></script>
+    <script src="../renderer.js" async defer></script>
+    <script src="../main.js" async defer></script>
+  </body>
+</html>
